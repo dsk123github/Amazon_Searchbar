@@ -1,6 +1,6 @@
 Feature: Searchbar feature
-  @smoke
 
+@smoke
   Scenario:  Verify that user is able to get the relevant product results as per the Search Query
     Given the User navigates to the Homepage
     When the User enters the product name
@@ -11,6 +11,7 @@ Feature: Searchbar feature
   Given the User navigates to the Homepage
   When the User enters the brand name
   Then the user should get the relevant products based on the brand name
+
 
  Scenario: Verify that User is able to get the Error message ,when he enters the Invalid Product name
    Given the User navigates to the Homepage
