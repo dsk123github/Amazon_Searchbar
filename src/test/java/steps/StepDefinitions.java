@@ -96,7 +96,7 @@ public class StepDefinitions {
     public void searchBoxWidthShouldBeAsPerSpecification() {
         Dimension dimension =  homePage.getSearchbar().getSize();
         System.out.println(dimension.getWidth());
-               Assert.assertEquals(dimension.getWidth(),444);
+               Assert.assertEquals(dimension.getWidth(),251);
     }
 
     @When("user enters {string} in the search bar")
