@@ -1,4 +1,4 @@
-package Steps;
+package steps;
 
 
 import io.cucumber.java.After;
@@ -30,11 +30,12 @@ public class Hooks {
             }
         }
 
-//        @After(order=0)
-//        public void tearDown() {
- //           browserManager.getDriver().quit();
-//        }
-    }
+       @After(order=0)
+       public void tearDown() {
+            browserManager.getDriver().quit();
+       }
+       }
+
 
 
 

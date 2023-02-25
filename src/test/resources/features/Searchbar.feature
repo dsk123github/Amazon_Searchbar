@@ -1,6 +1,5 @@
 Feature: Searchbar feature
 
-@smoke
   Scenario:  Verify that user is able to get the relevant product results as per the Search Query
     Given the User navigates to the Homepage
     When the User enters the product name
@@ -13,18 +12,21 @@ Feature: Searchbar feature
   Then the user should get the relevant products based on the brand name
 
 
- Scenario: Verify that User is able to get the Error message ,when he enters the Invalid Product name
-   Given the User navigates to the Homepage
-   When the user should enter the invalid product name
-   Then the user should be able get the error message
-
-  Scenario: Verify that User is able to see the suggested product list in the dropdown list
+  Scenario: Verify that the Amazon search box height is as per specification
     Given the User navigates to the Homepage
-    When the User types the product name
-    Then user is able to see the suggested product list in the Drop-down list
+    Then search box height should be as per specification
 
-    Scenario: Verify that Cursor is displaying on clicking inside the Searchbar
-      Given the User navigates to the Homepage
-      When  the user clicks inside the Searchbar
-      Then user is able to see the Cursor inside the searchbar
+  Scenario: Verify that the Amazon search box width is as per specification
+    Given the User navigates to the Homepage
+    Then search box width should be as per specification
+
+  Scenario Outline: : Verify that user should get the relevant results when he enters the Incorrect product name
+        Given the User navigates to the Homepage
+        When user enters "<product name>" in the search bar
+        Then User Should display the relevant "<product name>"
+        Examples:
+        |  product name    |
+        |   sarreys        |
+        |   red dressid    |
+
 
