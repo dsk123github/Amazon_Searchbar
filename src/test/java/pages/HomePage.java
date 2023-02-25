@@ -1,4 +1,4 @@
-package Pages;
+package pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -14,7 +14,7 @@ public class HomePage {
         PageFactory.initElements(driver, this);
     }
 
-    @FindBy(xpath = "//input[@id='twotabsearchtextbox']")
+    @FindBy(xpath = "//input[@id=\"twotabsearchtextbox\"]")
     WebElement Searchbar;
 
     public WebElement getSearchbar() {
@@ -25,36 +25,18 @@ public class HomePage {
         Searchbar = searchbar;
     }
 
-    @FindBy(xpath = "//span[@class='a-color-state a-text-bold']")
+    @FindBy(xpath = "//span[@class=\"a-color-state a-text-bold\"]")
     WebElement SearchResult;
 
     public WebElement getSearchResult() {
-
         return SearchResult;
     }
-
-    public void setSearchResult(WebElement searchResult) {
-
-        SearchResult = searchResult;
-    }
-
-
-
-    @FindBy(xpath = "(//span[@class='a-size-medium a-color-base'])[1]")
-    WebElement Error;
-
-    public void setError(WebElement error) {
-
-        Error = error;
-    }
-
-    public WebElement getError() {
-
-        return Error;
-    }
-
-
 }
+
+
+
+
+
 
 
 
